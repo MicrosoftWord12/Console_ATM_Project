@@ -7,7 +7,7 @@ namespace Console_ATM_Project
         static void Main(string[] args)
         {
             bool incorrectOptionQ = false;
-            while (incorrectOptionQ)
+            while (incorrectOptionQ == false)
             {
                 Console.WriteLine("1. Withdraw");
                 Console.WriteLine("2. Deposit");
@@ -16,7 +16,11 @@ namespace Console_ATM_Project
         
                 switch (option){
                     case 1:
-                        Console.WriteLine("Withdraw");
+                        Console.WriteLine("How much would you like to withdraw?");
+                        int amountOfMoney = int.Parse(Console.ReadLine());
+
+
+
                         incorrectOptionQ = true;
                         break;
 

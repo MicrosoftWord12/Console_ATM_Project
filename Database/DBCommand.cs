@@ -7,7 +7,7 @@ namespace Console_ATM_Project.Database
     class DBCommand
     {
 
-        public NpgsqlCommand command(String SQL)
+        public static NpgsqlCommand command(String SQL)
         {
             DBConnection conn = new DBConnection();
             NpgsqlCommand cmd = new NpgsqlCommand(SQL, conn.Connection());
