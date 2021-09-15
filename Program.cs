@@ -16,8 +16,12 @@ namespace Console_ATM_Project
         
                 switch (option){
                     case 1:
-                        Console.WriteLine("How much would you like to withdraw?");
-                        int amountOfMoney = int.Parse(Console.ReadLine());
+                        Console.WriteLine("What is your card pin?");
+                        int cardPin = int.Parse(Console.ReadLine());
+
+                        Console.WriteLine("What is your card number?");
+                        int cardNumber = int.Parse(Console.ReadLine());
+                        ATM_Actions.Withdraw.WithdrawCash(cardPin, cardNumber);
 
 
 

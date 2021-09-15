@@ -7,9 +7,10 @@ namespace Console_ATM_Project.Database
     class SelectCardBalance
     {
 
-        public int CheckBalance(int cardNumber, int cardPin)
+        public static int CheckBalance(int cardNumber, int cardPin)
         {
-            String SQL = "select user_amount from useraccounts where cardNumber = " + cardNumber+ " and cardPin =" + cardPin + "'";
+            //String SQL = $"select user_amount from useraccounts where card_number = '" + cardNumber+ '" and card_pin =" + cardPin + "'";
+            String SQL = $"select user_amount from useraccounts where card_number='{cardNumber}' and card_pin ='{cardPin}'";
             String balance = DBCommand.command(SQL).ExecuteScalar().ToString();
             return int.Parse(balance);
         }
