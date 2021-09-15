@@ -6,6 +6,10 @@ namespace Console_ATM_Project.ATM_Actions
 {
     class CheckBal
     {
-        // This is to check the balance of a person card
+        public static int checkCardBalance(int cardNumber, int cardPin)
+        {
+            return Database.SelectCardBalance.CheckBalance(cardNumber, cardPin);
+        }
+
     }
 }
