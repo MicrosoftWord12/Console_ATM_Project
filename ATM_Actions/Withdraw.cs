@@ -11,7 +11,7 @@ namespace Console_ATM_Project.ATM_Actions
         {
 
             int currentBalance = Database.SelectCardBalance.CheckBalance(cardNumber, cardPin);
-            Console.WriteLine("How much would you like to withdraw? ");
+            Console.WriteLine("How much would you like to withdraw?");
             int withdrawAmount = int.Parse(Console.ReadLine());
             int newAmount = currentBalance - withdrawAmount;
             if (currentBalance > withdrawAmount)
@@ -28,7 +28,6 @@ namespace Console_ATM_Project.ATM_Actions
             }
             else if(currentBalance < withdrawAmount)
             {
-                //Console.WriteLine("Sorry but you do not have the funds in your bank account to withdraw that");
                 throw new Exception("Sorry Not Enough Money in bank account");
             }
             else

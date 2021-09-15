@@ -17,24 +17,32 @@ namespace Console_ATM_Project
                 switch (option){
                     case 1:
                         Console.WriteLine("What is your card pin?");
-                        int cardPin = int.Parse(Console.ReadLine());
+                        int WithDrawCardPin = int.Parse(Console.ReadLine());
 
                         Console.WriteLine("What is your card number?");
                         int cardNumber = int.Parse(Console.ReadLine());
-                        ATM_Actions.Withdraw.WithdrawCash(cardPin, cardNumber);
-
-
-
+                        ATM_Actions.Withdraw.WithdrawCash(WithDrawCardPin, cardNumber);
                         incorrectOptionQ = true;
                         break;
 
                     case 2:
-                        Console.WriteLine("Deposit");
+                        Console.WriteLine("What is your card pin?");
+                        int DepositCardPin = int.Parse(Console.ReadLine());
+
+                        Console.WriteLine("What is your card number?");
+                        int DepositCardNumber = int.Parse(Console.ReadLine());
+                        ATM_Actions.Deposit.DepositAmount(DepositCardPin, DepositCardNumber);
                         incorrectOptionQ = true;
                         break;
 
                     case 3:
-                        Console.WriteLine("Check Balance");
+                        Console.WriteLine("What is your card pin?");
+                        int CheckBalCardPin = int.Parse(Console.ReadLine());
+
+                        Console.WriteLine("What is your card Number?");
+                        int CheckBalCardNumber = int.Parse(Console.ReadLine());
+                        ATM_Actions.CheckBal.checkCardBalance(CheckBalCardNumber, CheckBalCardPin);
+
                         incorrectOptionQ = true;
                         break;
 

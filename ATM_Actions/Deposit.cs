@@ -6,7 +6,7 @@ namespace Console_ATM_Project.ATM_Actions
 {
     class Deposit
     {
-        public int DepositAmount(int cardNumber, int cardPin)
+        public static int DepositAmount(int cardPin, int cardNumber)
         {
             int currentBalance = Database.SelectCardBalance.CheckBalance(cardNumber, cardPin);
             int withdrawAmount = int.Parse(Console.ReadLine());
