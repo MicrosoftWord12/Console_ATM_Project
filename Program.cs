@@ -42,7 +42,6 @@ namespace Console_ATM_Project
                         Console.WriteLine("What is your card Number?");
                         int CheckBalCardNumber = int.Parse(Console.ReadLine());
                         ATM_Actions.CheckBal.checkCardBalance(CheckBalCardNumber, CheckBalCardPin);
-
                         incorrectOptionQ = true;
                         break;
 
